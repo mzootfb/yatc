@@ -7,27 +7,17 @@
   <title>Foundation Starter Template</title>
   <!-- Compressed CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.0-rc.2/dist/css/foundation.min.css" integrity="sha256-iJQ8dZac/jUYHxiEnZJsyVpKcdq2sQvdA7t02QFmp30= sha384-SplqNBo/0ZlvSdwrP/riIPDozO5ck8+yIm++KVqyMAC53S6m3BaV+2OLpi7ULOOh sha512-ho6hK4sAWdCeqopNZWNy1d9Ok2hzfTLQLcGSr8ZlRzDzh6tNHkVoqSl6wgLsqls3yazwiG9H9dBCtSfPuiLRCQ==" crossorigin="anonymous">
+  <!--referenced css-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/11.1.0/nouislider.css">
+  <!--custom css-->
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="jsalgCSS.css">
 </head>
 <body>
   <!--start body-->
   <div class="grid-container">
-   <div class="grid-x grid-margin-x grid-padding-x">
-    <div class="cell">
-     <!--breadcrumbs-->
-     <nav aria-label="You are here:" role="navigation">
-      <ul class="breadcrumbs">
-       <li><a href="#">FIU Online</a></li>
-       <li>
-        <span class="show-for-sr">Current: </span> Tuition Calculator
-      </li>
-    </ul>
-  </nav>
-</div>
-</div>
 <div class="grid-x grid-margin-x grid-padding-x">
   <div class="cell">
    <!--description-->
@@ -49,10 +39,11 @@
    <label>
     <span class="fixFont"><span class="numbering">1.</span> Academic Year</span>
     <select class="chosen-select" multiple data-placeholder=" ">
-     <option value="husker">Husker</option>
-     <option value="starbuck">Starbuck</option>
-     <option value="hotdog">Hot Dog</option>
-     <option value="apollo">Apollo</option>
+     <option value="">Please Select...</option>
+     <option value="1718">2017-2018</option>
+     <option value="1617">2016-2017</option>
+     <option value="1516">2015-2016</option>
+     <option value="1415">2014-2015</option>
    </select>
  </label>
 </div>
@@ -60,12 +51,11 @@
 <div class="cell small-6">
  <label>
   <span class="fixFont"><span class="numbering">2.</span> Degree Type</span>
-  <select class="chosen-select" multiple data-placeholder=" ">
-   <option value="husker">Husker</option>
-   <option value="starbuck">Starbuck</option>
-   <option value="hotdog">Hot Dog</option>
-   <option value="apollo">Apollo</option>
- </select>
+  <select class="chosen-select" multiple data-placeholder=" " id="degreeType">
+    <option value="">Please Select...</option>
+    <option value="1">Undergraduate</option>
+    <option value="2">Graduate</option>
+  </select>
 </label>
 </div>
 </div>
@@ -74,11 +64,55 @@
   <div class="cell">
    <label>
     <span class="fixFont"><span class="numbering">3.</span> Select Program</span>
-    <select class="chosen-select" multiple data-placeholder=" ">
-     <option value="husker">Husker</option>
-     <option value="starbuck">Starbuck</option>
-     <option value="hotdog">Hot Dog</option>
-     <option value="apollo">Apollo</option>
+    <select class="chosen-select" multiple data-placeholder=" " id="programSelect" onchange="calculator();">
+     <option value="">Please Select...</option>
+     <option class="u" value="37">Asian Studies BA</option>
+     <option class="u" value="1">Communication Arts: Organizational Communication Studies BA</option>
+     <option class="u" value="2">Crime Science BS</option>
+     <option class="u" value="3">Criminal Justice BS</option>
+     <option class="u" value="4">Early Childhood Education BS</option>
+     <option class="u" value="5">Finance BBA</option>
+     <option class="u" value="6">Health Services Administration BHSA</option>
+     <option class="u" value="7">History BA</option>
+     <option class="u" value="8">Hospitality Management BS</option>
+     <option class="u" value="9">Hospitality Management: Event Management Track BS</option>
+     <option class="u" value="10">Hospitality Management: Hotel Lodging Management Track BS</option>
+     <option class="u" value="11">Hospitality Management: Resturant and Food Service Management Track BS</option>
+     <option class="u" value="12">Hospitality Management: Travel and Tourism BS</option>
+     <option class="u" value="13">Human Resource Management BBA</option>
+     <option class="u" value="14">International Relations BA</option>
+     <option class="u" value="15">Information Technology BA</option>
+     <option class="u" value="16">Information Technology BS</option>
+     <option class="u" value="17">Interdisciplinary Studies BA</option>
+     <option class="u" value="18">International Business BBA</option>
+     <option class="u" value="19">Internet of Things BS</option>
+     <option class="u" value="20">Latin America and Caribbean Studies BA</option>
+     <option class="u" value="21">Logistics and Supply Chain Management BBA</option>
+     <option class="u" value="22">Management BBA</option>
+     <option class="u" value="23">Marketing BBA</option>
+     <option class="u" value="24">Nursing BS</option>
+     <option class="u" value="25">Political Science BA</option>
+     <option class="u" value="26">Psychology BA</option>
+     <option class="u" value="27">Public Administration BPA</option>
+     <option class="u" value="28">Public Relations, Advertising and Applied Communication BS</option>
+     <option class="u" value="29">Recreation and Sport Management: Pre-Recreational Therapy/Adaptive Recreation BS</option>
+     <option class="u" value="30">Recreation and Sport Management: Recreation and Sport Management Track BS</option>
+     <option class="u" value="31">Religous Studies BA</option>
+     <option class="u" value="32">Spanish BA</option>
+     <option class="u" value="33">Sociology/Anthropology: Anthropology Track BA</option>
+     <option class="u" value="34">Sociology/Anthropology: Sociology Track BA</option>
+     <option class="u" value="35">Sustainablity and the Environment BA</option>
+     <option class="u" value="36">Womens and Gender Studies BA</option>
+     <option class="g" value="50">Curriculum and Instruction</option>
+     <option class="g" value="51">Engineering Management</option>
+     <option class="g" value="52">Global Strategic Communications</option>
+     <option class="g" value="53">Health Services Administration (Hybrid)</option>
+     <option class="g" value="54">Healthcare MBA</option>
+     <option class="g" value="55">Human Resource Management</option>
+     <option class="g" value="56">International Business</option>
+     <option class="g" value="57">Network Security</option>
+     <option class="g" value="58">Real Estate</option>
+     <option class="g" value="59">Special Education</option>
    </select>
  </label>
 </div>
@@ -89,13 +123,13 @@
    <p><span class="fixFont"><span class="numbering">4.</span> Residency</span></p>
  </div>
  <div class="cell large-4">
-   <label class="material-checkbox"><input type="checkbox"><span>In-State</span></label>
+   <label class="material-checkbox"><input type="checkbox" class="radio" name="fooby[1][]"><span>In-State</span></label>
  </div>
  <div class="cell large-4">
-   <label class="material-checkbox"><input type="checkbox"><span>Out-of-state</span></label>
+   <label class="material-checkbox"><input type="checkbox" class="radio" name="fooby[1][]"><span>Out-of-state</span></label>
  </div>
  <div class="cell large-4">
-   <label class="material-checkbox"><input type="checkbox"><span>International</span></label>
+   <label class="material-checkbox"><input type="checkbox" class="radio" name="fooby[1][]"><span>International</span></label>
  </div>
 </div>
 </div>
@@ -116,28 +150,27 @@
 </div>
 <div class="grid-x grid-margin-x grid-padding-x">
   <div class="cell">
-   <label class="whitefont">
-     12 Fall Credits
-     <input type="range" min="1" max="18" value="12" class="sliderC" id="sldrFall">
-   </label>
+    <br>
+   <label for="sldrFall" class="whitefont"><span id="fallhrs">12</span> Fall Credits</label>
+     <!--<input type="range" min="1" max="18" value="12" class="sliderC" id="sldrFall">-->
+     <div id="sldrFall"></div>
    <br>
  </div>
 </div>
 <div class="grid-x grid-margin-x grid-padding-x">
   <div class="cell">
-   <label class="whitefont">
-     12 Spring Credits
-     <input type="range" min="1" max="18" value="12" class="sliderC" id="sldrSpr">
-   </label>
+   <label for="sldrSpr" class="whitefont"><span id="sprhrs">12</span> Spring Credits</label>
+     <!--<input type="range" min="1" max="18" value="12" class="sliderC" id="sldrSpr">-->
+     <div id="sldrSpr"></div>
    <br>
  </div>
 </div>
 <div class="grid-x grid-margin-x grid-padding-x">
   <div class="cell">
-   <label class="whitefont">
-     6 Summer Credits
-     <input type="range" min="1" max="18" value="6" class="sliderC" id="sldrSum">
-   </label>
+   <label for="sldrSum" class="whitefont"><span id="sumhrs">6</span> Summer Credits</label>
+     <!--<input type="range" min="1" max="18" value="6" class="sliderC" id="sldrSum">-->
+     <div id="sldrSum"></div>
+   <br>
    <br>
  </div>
 </div>
@@ -145,7 +178,7 @@
   <div class="cell text-center whitefont bluebg">
    <div class="grid-x">
     <div class="cell large-6 text-right">
-     <span class="h1 bigNum">0 </span>
+     <span id="ttlhrs" class="h1 bigNum">0 </span>
    </div>
    <div class="cell large-2 text-left">
      <div class="grid-x">
@@ -220,12 +253,15 @@
 </table>
 </div>
 </div>
-         <!--<div class="grid-x grid-margin-x grid-padding-x" style="background-color: #071E3E;">
-            <div class="cell">
-              <h1 style="color: white;">Your estimated tuition <span style="font-weight: 500;">$0</span></h1>
-            </div>
-            </div>
-          -->
+<div class="grid-x grid-margin-x grid-padding-x">
+  <div class="cell">
+    <div class="callout secondary">
+      <h5>You've got a grad program!</h5>
+      <p id="gradText">It has an easy to override visual style, and is appropriately subdued.</p>
+      <a href="#" id="gradTitle">It's dangerous to go alone, take this.</a>
+    </div>            </div>
+  </div>
+
           <div class="grid-x grid-margin-x grid-padding-x">
             <div class="cell text-center"><br>
               <p><button class="button">Apply Now</button></p>
@@ -254,10 +290,17 @@
           $(document).foundation();
          </script>
        -->
+       <!--required js-->
        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
        <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.js"></script>
+       <!--referenced js-->
        <script src="https://cdnjs.cloudflare.com/ajax/libs/what-input/5.1.1/what-input.js"></script>
        <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/11.1.0/nouislider.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.1.0/wNumb.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+
+       <!--custom js-->
        <script src="jsalgJS.js"></script>
        <script>
          $(".chosen-select").chosen({max_selected_options: 1});  
