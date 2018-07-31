@@ -1,4 +1,74 @@
 /* slider styling */
+.noUi-target {
+    background: #d4eefc;
+    border-radius: 10px;
+    border: none;
+    /* box-shadow: inset 0 1px 1px #F0F0F0, 0 3px 6px -5px #BBB; */
+}
+.noUi-horizontal {
+    height: 13px;
+}
+.noUi-background {
+  height: 11px;
+  background-color: #D4EEFC;
+  border-radius: 20px;
+  border: none;
+}
+.noUi-background.noUi-vertical {
+  height: 200px;
+  width: 11px;
+  margin: 0 auto 30px;
+}
+
+.noUi-base .noUi-connect {
+  background-color: #D4EEFC;
+}
+.noUi-base .noUi-handle {
+  background-color: #071E3E;
+  border: 4px solid #FFFFFF;
+  border-radius: 11px;
+  box-shadow: none;
+  color: #071E3E;
+  font-size: 0px;
+  height: 24px;
+  left: 0;
+  margin-left: -22px;
+  margin-top: -7.5px;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 23px;
+  z-index: 2;
+}
+.noUi-horizontal .noUi-base .noUi-handle {
+  cursor: ew-resize;
+}
+.noUi-vertical .noUi-base .noUi-handle {
+  cursor: ns-resize;
+  margin-left: -6px;
+}
+.noUi-base .noUi-handle:hover {
+  background-color: #0c346c;
+}
+.noUi-base .noUi-handle.noUi-active {
+  background-color: #020810;
+  z-index: 3;
+}
+.noUi-base .noUi-handle::before {
+  background: transparent;
+  content: attr(data-value);
+  display: table-cell;
+  font-size: 1px;
+  font-weight: 100;
+  position: static;
+  width: 100%;
+  vertical-align: middle;
+}
+.noUi-base .noUi-handle::after {
+  display: none;
+}
+
 
 .sliderC {
     -webkit-appearance: none;
@@ -186,3 +256,4 @@ body {
 .sub {
     vertical-align: sub;
 }
+
