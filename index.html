@@ -1,0 +1,269 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foundation Starter Template</title>
+  <!-- Compressed CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.0-rc.2/dist/css/foundation.min.css" integrity="sha256-iJQ8dZac/jUYHxiEnZJsyVpKcdq2sQvdA7t02QFmp30= sha384-SplqNBo/0ZlvSdwrP/riIPDozO5ck8+yIm++KVqyMAC53S6m3BaV+2OLpi7ULOOh sha512-ho6hK4sAWdCeqopNZWNy1d9Ok2hzfTLQLcGSr8ZlRzDzh6tNHkVoqSl6wgLsqls3yazwiG9H9dBCtSfPuiLRCQ==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="jsalgCSS.css">
+</head>
+<body>
+  <!--start body-->
+  <div class="grid-container">
+   <div class="grid-x grid-margin-x grid-padding-x">
+    <div class="cell">
+     <!--breadcrumbs-->
+     <nav aria-label="You are here:" role="navigation">
+      <ul class="breadcrumbs">
+       <li><a href="#">FIU Online</a></li>
+       <li>
+        <span class="show-for-sr">Current: </span> Tuition Calculator
+      </li>
+    </ul>
+  </nav>
+</div>
+</div>
+<div class="grid-x grid-margin-x grid-padding-x">
+  <div class="cell">
+   <!--description-->
+   <p>The Tuition Calculator provides a cost estimate if the tuition and fees associated with attending FIU Online as an Undergraduate or Graduate student.</p>
+   <br>
+ </div>
+</div>
+<div class="grid-x">
+  <div class="cell small-6">
+   <!--drop down area-->
+   <div class="grid-x grid-padding-x headerback">
+    <div class="cell">
+     <h3>Calculate my Tuition</h3>
+   </div>
+ </div>
+ <br>
+ <div class="grid-x grid-margin-x grid-padding-x">
+  <div class="cell small-6">
+   <label>
+    <span class="fixFont"><span class="numbering">1.</span> Academic Year</span>
+    <select class="chosen-select" multiple data-placeholder=" ">
+     <option value="husker">Husker</option>
+     <option value="starbuck">Starbuck</option>
+     <option value="hotdog">Hot Dog</option>
+     <option value="apollo">Apollo</option>
+   </select>
+ </label>
+</div>
+<br>
+<div class="cell small-6">
+ <label>
+  <span class="fixFont"><span class="numbering">2.</span> Degree Type</span>
+  <select class="chosen-select" multiple data-placeholder=" ">
+   <option value="husker">Husker</option>
+   <option value="starbuck">Starbuck</option>
+   <option value="hotdog">Hot Dog</option>
+   <option value="apollo">Apollo</option>
+ </select>
+</label>
+</div>
+</div>
+<br>
+<div class="grid-x grid-margin-x grid-padding-x">
+  <div class="cell">
+   <label>
+    <span class="fixFont"><span class="numbering">3.</span> Select Program</span>
+    <select class="chosen-select" multiple data-placeholder=" ">
+     <option value="husker">Husker</option>
+     <option value="starbuck">Starbuck</option>
+     <option value="hotdog">Hot Dog</option>
+     <option value="apollo">Apollo</option>
+   </select>
+ </label>
+</div>
+</div>
+<br>
+<div class="grid-x grid-margin-x grid-padding-x">
+  <div class="cell">
+   <p><span class="fixFont"><span class="numbering">4.</span> Residency</span></p>
+ </div>
+ <div class="cell large-4">
+   <label class="material-checkbox"><input type="checkbox"><span>In-State</span></label>
+ </div>
+ <div class="cell large-4">
+   <label class="material-checkbox"><input type="checkbox"><span>Out-of-state</span></label>
+ </div>
+ <div class="cell large-4">
+   <label class="material-checkbox"><input type="checkbox"><span>International</span></label>
+ </div>
+</div>
+</div>
+<div class="cell small-6" id="slidercell">
+ <!--slider area-->
+ <br>
+ <div class="grid-x grid-padding-x">
+  <div class="cell large-4 text-center">
+   <a class="button expanded sldrbtn buttonCactive" id="fullbtn"><span>Full-Time</span></a>
+ </div>
+ <div class="cell large-4 text-center">
+   <a class="button expanded sldrbtn buttonC" id="partbtn"><span>Part-Time</span></a>
+ </div>
+ <div class="cell large-4 text-center">
+   <a class="button expanded sldrbtn buttonC" id="custmbtn"><span>Custom</span></a>
+ </div>
+ <br>
+</div>
+<div class="grid-x grid-margin-x grid-padding-x">
+  <div class="cell">
+   <label class="whitefont">
+     12 Fall Credits
+     <input type="range" min="1" max="18" value="12" class="sliderC" id="sldrFall">
+   </label>
+   <br>
+ </div>
+</div>
+<div class="grid-x grid-margin-x grid-padding-x">
+  <div class="cell">
+   <label class="whitefont">
+     12 Spring Credits
+     <input type="range" min="1" max="18" value="12" class="sliderC" id="sldrSpr">
+   </label>
+   <br>
+ </div>
+</div>
+<div class="grid-x grid-margin-x grid-padding-x">
+  <div class="cell">
+   <label class="whitefont">
+     6 Summer Credits
+     <input type="range" min="1" max="18" value="6" class="sliderC" id="sldrSum">
+   </label>
+   <br>
+ </div>
+</div>
+<div class="grid-x grid-padding-x">
+  <div class="cell text-center whitefont bluebg">
+   <div class="grid-x">
+    <div class="cell large-6 text-right">
+     <span class="h1 bigNum">0 </span>
+   </div>
+   <div class="cell large-2 text-left">
+     <div class="grid-x">
+      <div class="cell" style="line-height:1.00;">
+       <br>
+       <span class="whitefont">Total</span>
+       <br>
+       <span class="whitefont">Credits</span>
+     </div>
+   </div>
+ </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="grid-x grid-margin-x">
+  <!--table-->
+  <div class="cell">
+   <table>
+    <thead>
+     <tr>
+      <th>Tuition/Fee Description</th>
+      <th>Fall</th>
+      <th>Spring</th>
+      <th>Summer</th>
+    </tr>
+  </thead>
+  <tbody>
+   <tr>
+    <td>FIU Online Tuition</td>
+    <td>$0.00</td>
+    <td>$0.00</td>
+    <td>$0.00</td>
+  </tr>
+  <tr>
+    <td>Tuition Differential Fee</td>
+    <td>$0.00</td>
+    <td>$0.00</td>
+    <td>$0.00</td>
+  </tr>
+  <tr>
+    <td>Distance learning Fee</td>
+    <td>$0.00</td>
+    <td>$0.00</td>
+    <td>$0.00</td>
+  </tr>
+  <tr>
+    <td>Athletic fee</td>
+    <td>$0.00</td>
+    <td>$0.00</td>
+    <td>$0.00</td>
+  </tr>
+  <tr>
+    <td>Parking Fee<span class="super">&#8224;</span></td>
+    <td>$0.00</td>
+    <td>$0.00</td>
+    <td>$0.00</td>
+  </tr>
+  <tr>
+    <td>Health Fee</td>
+    <td>$0.00</td>
+    <td>$0.00</td>
+    <td>$0.00</td>
+  </tr>
+  <tr class="nobrder bluebg whitefont">
+    <td colspan="4" class="text-center" style="border:0;">
+     <p class="h4 whitefont">Your Total Tuition&nbsp;<span class="super"><i class="fas fa-dollar-sign"></i></span><span class="h1 bigNum sub">0</span></p>
+   </td>
+ </tr>
+</tbody>
+</table>
+</div>
+</div>
+         <!--<div class="grid-x grid-margin-x grid-padding-x" style="background-color: #071E3E;">
+            <div class="cell">
+              <h1 style="color: white;">Your estimated tuition <span style="font-weight: 500;">$0</span></h1>
+            </div>
+            </div>
+          -->
+          <div class="grid-x grid-margin-x grid-padding-x">
+            <div class="cell text-center"><br>
+              <p><button class="button">Apply Now</button></p>
+            </div>
+          </div>
+          <div class="grid-x grid-margin-x grid-padding-x">
+            <!--disclaimer-->
+            <div class="cell text-right">
+             <p><button class="clear button secondary" data-open="exampleModal1">&#42;Disclaimer</button></p>
+           </div>
+           <div class="reveal" id="exampleModal1" data-reveal>
+            <p>* DISCLAIMER:</p>
+            <p>This is not a bill. This is only an estimate. Total tuition and fees are subject to change. Other costs such as lab fees, books, supplies and other materials are not included in this calculartion. Distance Learning Fee: Florida Statute 1009.24(17)(b) allows the university to charge a Distance Learning Fee for all online courses that generate fundable student credit hours. The fee is charged per credit, and is subject ti change depending on the amount of credits taken. Once Card: This is an annual fee, not related to your per credit fee, therefore, it is included in the total tuition but not listed above.</p>
+            <p> &#8224; These are fees that FIU Online students are waived by being a part of a fully online program.</p>
+            <button class="close-button" data-close aria-label="Close modal" type="button">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!--end body-->
+      <!-- Compressed JavaScript -->
+      <!--
+         <script>
+          $(document).foundation();
+         </script>
+       -->
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/what-input/5.1.1/what-input.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.js"></script>
+       <script src="jsalgJS.js"></script>
+       <script>
+         $(".chosen-select").chosen({max_selected_options: 1});  
+       </script>
+       <script>
+        $(document).foundation();
+      </script>
+    </body>
+    </html>
