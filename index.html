@@ -1,331 +1,339 @@
+
+
 <!doctype html>
 <html class="no-js" lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Foundation Starter Template</title>
-  <!-- Compressed CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.0-rc.2/dist/css/foundation.min.css" integrity="sha256-iJQ8dZac/jUYHxiEnZJsyVpKcdq2sQvdA7t02QFmp30= sha384-SplqNBo/0ZlvSdwrP/riIPDozO5ck8+yIm++KVqyMAC53S6m3BaV+2OLpi7ULOOh sha512-ho6hK4sAWdCeqopNZWNy1d9Ok2hzfTLQLcGSr8ZlRzDzh6tNHkVoqSl6wgLsqls3yazwiG9H9dBCtSfPuiLRCQ==" crossorigin="anonymous">
-  <!--referenced css-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/11.1.0/nouislider.css">
-  <!--custom css-->
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="jsalgCSS.css">
-</head>
-<body>
-  <!--start body-->
-  <div class="grid-container">
-<div class="grid-x grid-margin-x grid-padding-x">
-  <div class="cell">
-   <!--description-->
-   <p>The Tuition Calculator provides a cost estimate if the tuition and fees associated with attending FIU Online as an Undergraduate or Graduate student.</p>
-   <br>
- </div>
-</div>
-<div class="grid-x">
-  <div class="cell large-6 small-12">
-   <!--drop down area-->
-   <div class="grid-x grid-padding-x headerback">
-    <div class="cell large-12 small-12">
-     <h3>Calculate my Tuition</h3>
-   </div>
- </div>
- <br>
- <div class="grid-x grid-margin-x grid-padding-x">
-  <div class="cell large-6 small-12">
-   <label>
-    <span class="fixFont"><span class="numbering">1.</span> Academic Year</span>
-    <select class="chosen-select" multiple data-placeholder=" " id="acadYear">
-     <option value="">Please Select...</option>
-     <option value="1718">2017-2018</option>
-     <option value="1617">2016-2017</option>
-     <option value="1516">2015-2016</option>
-     <option value="1415">2014-2015</option>
-   </select>
- </label>
-</div>
-<br>
-<div class="cell large-6 small-12">
- <label>
-  <span class="fixFont"><span class="numbering">2.</span> Degree Type</span>
-  <select class="chosen-select" multiple data-placeholder=" " id="degreeType">
-    <option value="">Please Select...</option>
-    <option value="1">Undergraduate</option>
-    <option value="2">Graduate</option>
-  </select>
-</label>
-</div>
-</div>
-<br>
-<div class="grid-x grid-margin-x grid-padding-x">
-  <div class="cell large-12 small-12">
-   <label>
-    <span class="fixFont"><span class="numbering">3.</span> Select Program</span>
-  <select class="chosen-select" multiple data-placeholder=" " id="programType">
-     <option value="">Please Select...</option>
-     <option class="u" value="37">Asian Studies BA</option>
-     <option class="u" value="1">Communication Arts: Organizational Communication Studies BA</option>
-     <option class="u" value="2">Crime Science BS</option>
-     <option class="u" value="3">Criminal Justice BS</option>
-     <option class="u" value="4">Early Childhood Education BS</option>
-     <option class="u" value="5">Finance BBA</option>
-     <option class="u" value="6">Health Services Administration BHSA</option>
-     <option class="u" value="7">History BA</option>
-     <option class="u" value="8">Hospitality Management BS</option>
-     <option class="u" value="9">Hospitality Management: Event Management Track BS</option>
-     <option class="u" value="10">Hospitality Management: Hotel Lodging Management Track BS</option>
-     <option class="u" value="11">Hospitality Management: Resturant and Food Service Management Track BS</option>
-     <option class="u" value="12">Hospitality Management: Travel and Tourism BS</option>
-     <option class="u" value="13">Human Resource Management BBA</option>
-     <option class="u" value="14">International Relations BA</option>
-     <option class="u" value="15">Information Technology BA</option>
-     <option class="u" value="16">Information Technology BS</option>
-     <option class="u" value="17">Interdisciplinary Studies BA</option>
-     <option class="u" value="18">International Business BBA</option>
-     <option class="u" value="19">Internet of Things BS</option>
-     <option class="u" value="20">Latin America and Caribbean Studies BA</option>
-     <option class="u" value="21">Logistics and Supply Chain Management BBA</option>
-     <option class="u" value="22">Management BBA</option>
-     <option class="u" value="23">Marketing BBA</option>
-     <option class="u" value="24">Nursing BS</option>
-     <option class="u" value="25">Political Science BA</option>
-     <option class="u" value="26">Psychology BA</option>
-     <option class="u" value="27">Public Administration BPA</option>
-     <option class="u" value="28">Public Relations, Advertising and Applied Communication BS</option>
-     <option class="u" value="29">Recreation and Sport Management: Pre-Recreational Therapy/Adaptive Recreation BS</option>
-     <option class="u" value="30">Recreation and Sport Management: Recreation and Sport Management Track BS</option>
-     <option class="u" value="31">Religous Studies BA</option>
-     <option class="u" value="32">Spanish BA</option>
-     <option class="u" value="33">Sociology/Anthropology: Anthropology Track BA</option>
-     <option class="u" value="34">Sociology/Anthropology: Sociology Track BA</option>
-     <option class="u" value="35">Sustainablity and the Environment BA</option>
-     <option class="u" value="36">Womens and Gender Studies BA</option>
-     <option class="g" value="50">Curriculum and Instruction</option>
-     <option class="g" value="51">Engineering Management</option>
-     <option class="g" value="52">Global Strategic Communications</option>
-     <option class="g" value="53">Health Services Administration (Hybrid)</option>
-     <option class="g" value="54">Healthcare MBA</option>
-     <option class="g" value="55">Human Resource Management</option>
-     <option class="g" value="56">International Business</option>
-     <option class="g" value="57">Network Security</option>
-     <option class="g" value="58">Real Estate</option>
-     <option class="g" value="59">Special Education</option>
-   </select>
- </label>
-</div>
-</div>
-<br>
-<div class="grid-x grid-margin-x grid-padding-x">
-  <div class="cell large-12 small-12">
-   <p><span class="fixFont"><span class="numbering">4.</span> Residency</span></p>
- </div>
- <div class="cell large-4 small-12">
-   <label class="material-checkbox"><input type="checkbox" class="radio" name="fooby[1][]" value="1" id="flres"><span>In-State</span></label>
- </div>
- <div class="cell large-4 small-12">
-   <label class="material-checkbox"><input type="checkbox" class="radio" name="fooby[1][]" value="2" id="notres"><span>Out-of-state</span></label>
- </div>
- <div class="cell large-4 small-12">
-   <label class="material-checkbox"><input type="checkbox" class="radio" name="fooby[1][]" value="3" id="intrl"><span>International</span></label>
- </div>
-</div>
-</div>
-<div class="cell large-6 small-12" id="slidercell">
- <!--slider area-->
- <br>
- <div class="grid-x grid-padding-x">
-  <div class="cell large-4 text-center">
-   <a class="button expanded sldrbtn buttonCactive" id="fullbtn"><span>Full-Time</span></a>
- </div>
- <div class="cell large-4 text-center">
-   <a class="button expanded sldrbtn buttonC" id="partbtn"><span>Part-Time</span></a>
- </div>
- <div class="cell large-4 text-center">
-   <a class="button expanded sldrbtn buttonC" id="custmbtn"><span>Custom</span></a>
- </div>
- <br>
-</div>
-<div class="grid-x grid-margin-x grid-padding-x">
-  <div class="cell">
-    <br>
-   <label for="sldrFall" class="whitefont"><span id="fallhrs">12</span> Fall Credits</label>
-     <!--<input type="range" min="1" max="18" value="12" class="sliderC" id="sldrFall">-->
-     <div id="sldrFall"></div>
-   <br>
- </div>
-</div>
-<div class="grid-x grid-margin-x grid-padding-x">
-  <div class="cell">
-   <label for="sldrSpr" class="whitefont"><span id="sprhrs">12</span> Spring Credits</label>
-     <!--<input type="range" min="1" max="18" value="12" class="sliderC" id="sldrSpr">-->
-     <div id="sldrSpr"></div>
-   <br>
- </div>
-</div>
-<div class="grid-x grid-margin-x grid-padding-x">
-  <div class="cell">
-   <label for="sldrSum" class="whitefont"><span id="sumhrs">6</span> Summer Credits</label>
-     <!--<input type="range" min="1" max="18" value="6" class="sliderC" id="sldrSum">-->
-     <div id="sldrSum"></div>
-   <br>
-   <br>
- </div>
-</div>
-<div class="grid-x grid-padding-x show-for-medium">
-  <div class="cell text-center whitefont bluebg">
-   <div class="grid-x">
-    <div class="cell large-6 small-6 text-right">
-     <span id="ttlhrs" class="h1 bigNum">0 </span>
-   </div>
-   <div class="cell large-2 small-2 text-left">
-     <div class="grid-x">
-      <div class="cell" style="line-height:1.00;">
-       <br>
-       <span class="whitefont">Total</span>
-       <br>
-       <span class="whitefont">Credits</span>
-     </div>
-   </div>
- </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!--testing div-->
-<!--
-<div class="grid-padding-x grid-margin-x grid-x">
-  <div class="cell">
-    <div class="callout warning">
-  <h5 id-"testTitle">This is a callout.</h5>
-  <p id="testText">It has an easy to override visual style, and is appropriately subdued.</p>
-  <a href="#" id="testHighlight" onclick="calculator();">It's dangerous to go alone, take this.</a>
-</div>
-  </div>
-  </div>
--->
-  <!--end testing div-->
-<div class="grid-x grid-margin-x">
-  <!--table-->
-  <div class="cell">
-   <table class="stack">
-    <thead>
-     <tr>
-      <th>Tuition/Fee Description</th>
-      <th>Fall</th>
-      <th>Spring</th>
-      <th>Summer</th>
-    </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td>FIU Online Tuition</td>
-    <td id="multitude1">$0.00</td>
-    <td id="multitude2">$0.00</td>
-    <td id="multitude3">$0.00</td>
-  </tr>
-  <tr>
-    <td>Tuition Differential Fee</td>
-    <td id="diff1">$0.00</td>
-    <td id="diff2">$0.00</td>
-    <td id="diff3">$0.00</td>
-  </tr>
-  <tr>
-    <td>Distance learning Fee</td>
-    <td id="fee1">$0.00</td>
-    <td id="fee2">$0.00</td>
-    <td id="fee3">$0.00</td>
-  </tr>
-  <tr>
-    <td>Athletic fee<span class="super">&#8224;</span></td>
-    <td>$0.00</td>
-    <td>$0.00</td>
-    <td>$0.00</td>
-  </tr>
-  <tr>
-    <td>Parking Fee<span class="super">&#8224;</span></td>
-    <td>$0.00</td>
-    <td>$0.00</td>
-    <td>$0.00</td>
-  </tr>
-  <tr>
-    <td>Health Fee</td>
-    <td>$0.00</td>
-    <td>$0.00</td>
-    <td>$0.00</td>
-  </tr>
-  <tr>
-    <td>Total Tuition & Costs</td>
-    <td id="total1">$0.00</td>
-    <td id="total2">$0.00</td>
-    <td id="total3">$0.00</td>
-  </tr>
-  <tr >
-    <td colspan="4" class="text-center nobrder bluebg whitefont"">
-    <p class="h4 whitefont">Your Total Tuition&nbsp;<span class="super"><i class="fas fa-dollar-sign"></i></span><span class="h1 bigNum sub" id="costSemester">0</span></p>
-   </td>
- </tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="grid-x grid-margin-x grid-padding-x">
-  <div class="cell">
-    <div class="callout secondary">
-      <h5>You've got a grad program!</h5>
-      <p id="gradText">It has an easy to override visual style, and is appropriately subdued.</p>
-      <a href="#" id="gradTitle">It's dangerous to go alone, take this.</a>
-    </div>            </div>
-  </div>
-
-          <div class="grid-x grid-margin-x grid-padding-x">
-            <div class="cell text-center"><br>
-              <p><button class="button">Apply Now</button></p>
+   <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Foundation Starter Template</title>
+      <!-- Compressed CSS -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.0-rc.2/dist/css/foundation.min.css" integrity="sha256-iJQ8dZac/jUYHxiEnZJsyVpKcdq2sQvdA7t02QFmp30= sha384-SplqNBo/0ZlvSdwrP/riIPDozO5ck8+yIm++KVqyMAC53S6m3BaV+2OLpi7ULOOh sha512-ho6hK4sAWdCeqopNZWNy1d9Ok2hzfTLQLcGSr8ZlRzDzh6tNHkVoqSl6wgLsqls3yazwiG9H9dBCtSfPuiLRCQ==" crossorigin="anonymous">
+      <!--referenced css-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/11.1.0/nouislider.css">
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/2.0.3/motion-ui.css">
+      <!--custom css-->
+      <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="jsalgCSS.css">
+   </head>
+   <body>
+      <!--start body-->
+      <div class="grid-container">
+         <div class="grid-x grid-margin-x grid-padding-x">
+            <div class="cell">
+               <!--description-->
+               <p>The Tuition Calculator provides a cost estimate if the tuition and fees associated with attending FIU Online as an Undergraduate or Graduate student.</p>
+               <br>
             </div>
-          </div>
-          <div class="grid-x grid-margin-x grid-padding-x">
+         </div>
+         <div class="grid-x">
+            <div class="cell large-6 small-12">
+               <!--drop down area-->
+               <div class="grid-x grid-padding-x headerback">
+                  <div class="cell large-12 small-12">
+                     <h3>Calculate my Tuition</h3>
+                  </div>
+               </div>
+               <br>
+               <div class="grid-x grid-margin-x grid-padding-x">
+                  <div class="cell large-6 small-12">
+                     <label>
+                        <span class="fixFont"><span class="numbering">1.</span> Academic Year</span>
+                        <select class="chosen-select inpt" multiple data-placeholder=" " id="acadYear">
+                           <option value="">Please Select...</option>
+                           <option value="1718">2017-2018</option>
+                           <option value="1617">2016-2017</option>
+                           <option value="1516">2015-2016</option>
+                           <option value="1415">2014-2015</option>
+                        </select>
+                     </label>
+                  </div>
+                  <br>
+                  <div class="cell large-6 small-12">
+                     <label>
+                        <span class="fixFont"><span class="numbering">2.</span> Degree Type</span>
+                        <select class="chosen-select" multiple data-placeholder=" " id="degreeType">
+                           <option value="">Please Select...</option>
+                           <option value="1">Undergraduate</option>
+                           <option value="2">Graduate</option>
+                        </select>
+                     </label>
+                  </div>
+               </div>
+               <br>
+               <div class="grid-x grid-margin-x grid-padding-x">
+                  <div class="cell large-12 small-12">
+                     <label>
+                        <span class="fixFont"><span class="numbering">3.</span> Select Program</span>
+                        <select class="chosen-select inpt" multiple data-placeholder=" " id="programType">
+                           <option value="">Please Select...</option>
+                           <option class="u" value="37">Asian Studies BA</option>
+                           <option class="u" value="1">Communication Arts: Organizational Communication Studies BA</option>
+                           <option class="u" value="2">Crime Science BS</option>
+                           <option class="u" value="3">Criminal Justice BS</option>
+                           <option class="u" value="4">Early Childhood Education BS</option>
+                           <option class="u" value="5">Finance BBA</option>
+                           <option class="u" value="6">Health Services Administration BHSA</option>
+                           <option class="u" value="7">History BA</option>
+                           <option class="u" value="8">Hospitality Management BS</option>
+                           <option class="u" value="9">Hospitality Management: Event Management Track BS</option>
+                           <option class="u" value="10">Hospitality Management: Hotel Lodging Management Track BS</option>
+                           <option class="u" value="11">Hospitality Management: Resturant and Food Service Management Track BS</option>
+                           <option class="u" value="12">Hospitality Management: Travel and Tourism BS</option>
+                           <option class="u" value="13">Human Resource Management BBA</option>
+                           <option class="u" value="14">International Relations BA</option>
+                           <option class="u" value="15">Information Technology BA</option>
+                           <option class="u" value="16">Information Technology BS</option>
+                           <option class="u" value="17">Interdisciplinary Studies BA</option>
+                           <option class="u" value="18">International Business BBA</option>
+                           <option class="u" value="19">Internet of Things BS</option>
+                           <option class="u" value="20">Latin America and Caribbean Studies BA</option>
+                           <option class="u" value="21">Logistics and Supply Chain Management BBA</option>
+                           <option class="u" value="22">Management BBA</option>
+                           <option class="u" value="23">Marketing BBA</option>
+                           <option class="u" value="24">Nursing BS</option>
+                           <option class="u" value="25">Political Science BA</option>
+                           <option class="u" value="26">Psychology BA</option>
+                           <option class="u" value="27">Public Administration BPA</option>
+                           <option class="u" value="28">Public Relations, Advertising and Applied Communication BS</option>
+                           <option class="u" value="29">Recreation and Sport Management: Pre-Recreational Therapy/Adaptive Recreation BS</option>
+                           <option class="u" value="30">Recreation and Sport Management: Recreation and Sport Management Track BS</option>
+                           <option class="u" value="31">Religous Studies BA</option>
+                           <option class="u" value="32">Spanish BA</option>
+                           <option class="u" value="33">Sociology/Anthropology: Anthropology Track BA</option>
+                           <option class="u" value="34">Sociology/Anthropology: Sociology Track BA</option>
+                           <option class="u" value="35">Sustainablity and the Environment BA</option>
+                           <option class="u" value="36">Womens and Gender Studies BA</option>
+                           <option class="g" value="50">Curriculum and Instruction</option>
+                           <option class="g" value="51">Engineering Management</option>
+                           <option class="g" value="52">Global Strategic Communications</option>
+                           <option class="g" value="53">Health Services Administration (Hybrid)</option>
+                           <option class="g" value="54">Healthcare MBA</option>
+                           <option class="g" value="55">Human Resource Management</option>
+                           <option class="g" value="56">International Business</option>
+                           <option class="g" value="57">Network Security</option>
+                           <option class="g" value="58">Real Estate</option>
+                           <option class="g" value="59">Special Education</option>
+                        </select>
+                     </label>
+                  </div>
+               </div>
+               <br>
+               <div class="grid-x grid-margin-x grid-padding-x">
+                  <div class="cell large-12 small-12">
+                     <p><span class="fixFont"><span class="numbering">4.</span> Residency</span></p>
+                  </div>
+                  <div class="cell large-4 small-12">
+                     <label class="material-checkbox"><input type="checkbox" class="radio" name="fooby[1][]" value="1" id="flres"><span>In-State</span></label>
+                  </div>
+                  <div class="cell large-4 small-12">
+                     <label class="material-checkbox"><input type="checkbox" class="radio" name="fooby[1][]" value="2" id="notres"><span>Out-of-state</span></label>
+                  </div>
+                  <div class="cell large-4 small-12">
+                     <label class="material-checkbox"><input type="checkbox" class="radio" name="fooby[1][]" value="3" id="intrl"><span>International</span></label>
+                  </div>
+               </div>
+            </div>
+            <div class="cell large-6 small-12" id="slidercell">
+               <!--slider area-->
+               <br>
+               <div class="grid-x grid-padding-x">
+                  <div class="cell large-4 text-center">
+                     <a class="button expanded sldrbtn buttonCactive" id="fullbtn"><span>Full-Time</span></a>
+                  </div>
+                  <div class="cell large-4 text-center">
+                     <a class="button expanded sldrbtn buttonC" id="partbtn"><span>Part-Time</span></a>
+                  </div>
+                  <div class="cell large-4 text-center">
+                     <a class="button expanded sldrbtn buttonC" id="custmbtn"><span>Custom</span></a>
+                  </div>
+                  <br>
+               </div>
+               <div class="grid-x grid-margin-x grid-padding-x">
+                  <div class="cell">
+                     <br>
+                     <label for="sldrFall" class="whitefont"><span id="fallhrs">12</span> Fall Credits</label>
+                     <!--<input type="range" min="1" max="18" value="12" class="sliderC" id="sldrFall">-->
+                     <div id="sldrFall"></div>
+                     <br>
+                  </div>
+               </div>
+               <div class="grid-x grid-margin-x grid-padding-x">
+                  <div class="cell">
+                     <label for="sldrSpr" class="whitefont"><span id="sprhrs">12</span> Spring Credits</label>
+                     <!--<input type="range" min="1" max="18" value="12" class="sliderC" id="sldrSpr">-->
+                     <div id="sldrSpr"></div>
+                     <br>
+                  </div>
+               </div>
+               <div class="grid-x grid-margin-x grid-padding-x">
+                  <div class="cell">
+                     <label for="sldrSum" class="whitefont"><span id="sumhrs">6</span> Summer Credits</label>
+                     <!--<input type="range" min="1" max="18" value="6" class="sliderC" id="sldrSum">-->
+                     <div id="sldrSum"></div>
+                     <br>
+                     <br>
+                  </div>
+               </div>
+               <div class="grid-x grid-padding-x show-for-medium">
+                  <div class="cell text-center whitefont bluebg">
+                     <div class="grid-x">
+                        <div class="cell large-6 small-6 text-right">
+                           <span id="ttlhrs" class="h1 bigNum">0 </span>
+                        </div>
+                        <div class="cell large-2 small-2 text-left">
+                           <div class="grid-x">
+                              <div class="cell" style="line-height:1.00;">
+                                 <br>
+                                 <span class="whitefont">Total</span>
+                                 <br>
+                                 <span class="whitefont">Credits</span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!--testing div-->
+         <!--
+         <div class="grid-padding-x grid-margin-x grid-x">
+            <div class="cell">
+               <div class="callout warning">
+                  <h5 id-"testTitle">This is a callout.</h5>
+                  <p id="testText">It has an easy to override visual style, and is appropriately subdued.</p>
+                  <a href="#" id="testHighlight">It's dangerous to go alone, take this.</a>
+               </div>
+            </div>
+         </div>
+         -->
+         <!--end testing div-->
+         <div class="grid-x grid-margin-x">
+            <!--table-->
+            <div class="cell">
+               <table class="stack">
+                  <thead>
+                     <tr>
+                        <th>Tuition/Fee Description</th>
+                        <th>Fall</th>
+                        <th>Spring</th>
+                        <th>Summer</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>FIU Online Tuition</td>
+                        <td id="multitude1">$0.00</td>
+                        <td id="multitude2">$0.00</td>
+                        <td id="multitude3">$0.00</td>
+                     </tr>
+                     <tr>
+                        <td>Tuition Differential Fee</td>
+                        <td id="diff1">$0.00</td>
+                        <td id="diff2">$0.00</td>
+                        <td id="diff3">$0.00</td>
+                     </tr>
+                     <tr>
+                        <td>Distance learning Fee</td>
+                        <td id="fee1">$0.00</td>
+                        <td id="fee2">$0.00</td>
+                        <td id="fee3">$0.00</td>
+                     </tr>
+                     <tr>
+                        <td>Athletic fee<span class="super">&#8224;</span></td>
+                        <td>$0.00</td>
+                        <td>$0.00</td>
+                        <td>$0.00</td>
+                     </tr>
+                     <tr>
+                        <td>Parking Fee<span class="super">&#8224;</span></td>
+                        <td>$0.00</td>
+                        <td>$0.00</td>
+                        <td>$0.00</td>
+                     </tr>
+                     <tr>
+                        <td>Health Fee</td>
+                        <td>$0.00</td>
+                        <td>$0.00</td>
+                        <td>$0.00</td>
+                     </tr>
+                     <tr>
+                        <td>Total Tuition & Costs</td>
+                        <td id="total1">$0.00</td>
+                        <td id="total2">$0.00</td>
+                        <td id="total3">$0.00</td>
+                     </tr>
+                     <tr >
+                        <td colspan="4" class="text-center nobrder bluebg whitefont"">
+                           <p class="h4 whitefont">Your Total Tuition&nbsp;<span class="super"><i class="fas fa-dollar-sign"></i></span><span class="h1 bigNum sub" id="costSemester">0</span></p>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+         <!--<p><button class="button" data-toggle="gradModal">Click me for a modal</button></p>-->
+         <div class="reveal" id="gradModal" data-reveal data-animation-in="slide-in-up" data-animation-out="slide-out-down">
+            <h3>You've got a grad program!</h3>
+            <!--<p id="gradText" class="lead">There are many options for animating modals, check out the Motion UI library to see them all</p>-->
+            <dl>
+               <dt id="gradTitle">Construction Manamgement</dt>
+               <dd class="lead" id="gradText">$18,000 & 58 Credit Hours</dd>
+            </dl>
+            <p>Graduate degree programs work a bit differently than undergraduate courses. The above price is an estimate and we urge you to reach out to <a href="#">link</a> for more information.</p>
+            <button class="close-button" data-close="gradModal" aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+         </div>
+         <div class="grid-x grid-margin-x grid-padding-x">
+            <div class="cell text-center">
+               <br>
+               <p><button class="button">Apply Now</button></p>
+            </div>
+         </div>
+         <div class="grid-x grid-margin-x grid-padding-x">
             <!--disclaimer-->
             <div class="cell text-right">
-             <p><button class="clear button secondary" data-open="exampleModal1">&#42;Disclaimer</button></p>
-           </div>
-           <div class="reveal" id="exampleModal1" data-reveal>
-            <p>* DISCLAIMER:</p>
-            <p>This is not a bill. This is only an estimate. Total tuition and fees are subject to change. Other costs such as lab fees, books, supplies and other materials are not included in this calculartion. Distance Learning Fee: Florida Statute 1009.24(17)(b) allows the university to charge a Distance Learning Fee for all online courses that generate fundable student credit hours. The fee is charged per credit, and is subject ti change depending on the amount of credits taken. Once Card: This is an annual fee, not related to your per credit fee, therefore, it is included in the total tuition but not listed above.</p>
-            <p> &#8224; These are fees that FIU Online students are waived by being a part of a fully online program.</p>
-            <button class="close-button" data-close aria-label="Close modal" type="button">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-        </div>
+               <p><button class="clear button secondary" data-open="disclaimer">&#42;Disclaimer</button></p>
+            </div>
+            <div class="reveal" id="disclaimer" data-reveal>
+               <p>* DISCLAIMER:</p>
+               <p>This is not a bill. This is only an estimate. Total tuition and fees are subject to change. Other costs such as lab fees, books, supplies and other materials are not included in this calculartion. Distance Learning Fee: Florida Statute 1009.24(17)(b) allows the university to charge a Distance Learning Fee for all online courses that generate fundable student credit hours. The fee is charged per credit, and is subject ti change depending on the amount of credits taken. Once Card: This is an annual fee, not related to your per credit fee, therefore, it is included in the total tuition but not listed above.</p>
+               <p> &#8224; These are fees that FIU Online students are waived by being a part of a fully online program.</p>
+               <button class="close-button" data-close="disclaimer" aria-label="Close modal" type="button">
+               <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+         </div>
       </div>
-
       <!--end body-->
       <!-- Compressed JavaScript -->
       <!--
          <script>
           $(document).foundation();
          </script>
-       -->
-       <!--required js-->
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.js"></script>
-       <!--referenced js-->
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/what-input/5.1.1/what-input.js"></script>
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.js"></script>
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/11.1.0/nouislider.js"></script>
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.1.0/wNumb.js"></script>
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
-
-       <!--custom js-->
-       <script src="jsalgJS.js"></script>
-       <script>
+         -->
+      <!--required js-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.js"></script>
+      <!--referenced js-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/what-input/5.1.1/what-input.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/11.1.0/nouislider.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.1.0/wNumb.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/2.0.3/motion-ui.js"></script>
+      <!--custom js-->
+      <script src="jsalgJS.js"></script>
+      <script>
          $(".chosen-select").chosen({max_selected_options: 1});  
-       </script>
-       <script>
-        $(document).foundation();
       </script>
-    </body>
-    </html>
+      <script>
+         $(document).foundation();
+      </script>
+   </body>
+</html>
+
