@@ -38,7 +38,7 @@
   <div class="cell large-6 small-12">
    <label>
     <span class="fixFont"><span class="numbering">1.</span> Academic Year</span>
-    <select class="chosen-select" multiple data-placeholder=" ">
+    <select class="chosen-select" multiple data-placeholder=" " id="acadYear">
      <option value="">Please Select...</option>
      <option value="1718">2017-2018</option>
      <option value="1617">2016-2017</option>
@@ -123,13 +123,13 @@
    <p><span class="fixFont"><span class="numbering">4.</span> Residency</span></p>
  </div>
  <div class="cell large-4 small-12">
-   <label class="material-checkbox"><input type="checkbox" class="radio" name="fooby[1][]"><span>In-State</span></label>
+   <label class="material-checkbox"><input type="checkbox" class="radio" name="fooby[1][]" value="1" id="flres"><span>In-State</span></label>
  </div>
  <div class="cell large-4 small-12">
-   <label class="material-checkbox"><input type="checkbox" class="radio" name="fooby[1][]"><span>Out-of-state</span></label>
+   <label class="material-checkbox"><input type="checkbox" class="radio" name="fooby[1][]" value="2" id="notres"><span>Out-of-state</span></label>
  </div>
  <div class="cell large-4 small-12">
-   <label class="material-checkbox"><input type="checkbox" class="radio" name="fooby[1][]"><span>International</span></label>
+   <label class="material-checkbox"><input type="checkbox" class="radio" name="fooby[1][]" value="3" id="intrl"><span>International</span></label>
  </div>
 </div>
 </div>
@@ -195,6 +195,19 @@
 </div>
 </div>
 </div>
+<!--testing div-->
+<!--
+<div class="grid-padding-x grid-margin-x grid-x">
+  <div class="cell">
+    <div class="callout warning">
+  <h5 id-"testTitle">This is a callout.</h5>
+  <p id="testText">It has an easy to override visual style, and is appropriately subdued.</p>
+  <a href="#" id="testHighlight" onclick="calculator();">It's dangerous to go alone, take this.</a>
+</div>
+  </div>
+  </div>
+-->
+  <!--end testing div-->
 <div class="grid-x grid-margin-x">
   <!--table-->
   <div class="cell">
@@ -210,24 +223,24 @@
   <tbody>
    <tr>
     <td>FIU Online Tuition</td>
-    <td>$0.00</td>
-    <td>$0.00</td>
-    <td>$0.00</td>
+    <td id="multitude1">$0.00</td>
+    <td id="multitude2">$0.00</td>
+    <td id="multitude3">$0.00</td>
   </tr>
   <tr>
     <td>Tuition Differential Fee</td>
-    <td>$0.00</td>
-    <td>$0.00</td>
-    <td>$0.00</td>
+    <td id="diff1">$0.00</td>
+    <td id="diff2">$0.00</td>
+    <td id="diff3">$0.00</td>
   </tr>
   <tr>
     <td>Distance learning Fee</td>
-    <td>$0.00</td>
-    <td>$0.00</td>
-    <td>$0.00</td>
+    <td id="fee1">$0.00</td>
+    <td id="fee2">$0.00</td>
+    <td id="fee3">$0.00</td>
   </tr>
   <tr>
-    <td>Athletic fee</td>
+    <td>Athletic fee<span class="super">&#8224;</span></td>
     <td>$0.00</td>
     <td>$0.00</td>
     <td>$0.00</td>
@@ -244,9 +257,15 @@
     <td>$0.00</td>
     <td>$0.00</td>
   </tr>
-  <tr class="nobrder bluebg whitefont">
-    <td colspan="4" class="text-center" style="border:0;">
-     <p class="h4 whitefont">Your Total Tuition&nbsp;<span class="super"><i class="fas fa-dollar-sign"></i></span><span class="h1 bigNum sub">0</span></p>
+  <tr>
+    <td>Total Tuition & Costs</td>
+    <td id="total1">$0.00</td>
+    <td id="total2">$0.00</td>
+    <td id="total3">$0.00</td>
+  </tr>
+  <tr >
+    <td colspan="4" class="text-center nobrder bluebg whitefont"">
+    <p class="h4 whitefont">Your Total Tuition&nbsp;<span class="super"><i class="fas fa-dollar-sign"></i></span><span class="h1 bigNum sub" id="costSemester">0</span></p>
    </td>
  </tr>
 </tbody>
