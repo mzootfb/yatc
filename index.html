@@ -26,7 +26,7 @@
  </div>
 </div>
 <div class="grid-x">
-  <div class="cell small-6">
+  <div class="cell large-6 small-12">
    <!--drop down area-->
    <div class="grid-x grid-padding-x headerback">
     <div class="cell">
@@ -35,7 +35,7 @@
  </div>
  <br>
  <div class="grid-x grid-margin-x grid-padding-x">
-  <div class="cell small-6">
+  <div class="cell large-6 small-12">
    <label>
     <span class="fixFont"><span class="numbering">1.</span> Academic Year</span>
     <select class="chosen-select" multiple data-placeholder=" ">
@@ -48,7 +48,7 @@
  </label>
 </div>
 <br>
-<div class="cell small-6">
+<div class="cell large-6 small-12">
  <label>
   <span class="fixFont"><span class="numbering">2.</span> Degree Type</span>
   <select class="chosen-select" multiple data-placeholder=" " id="degreeType">
@@ -64,7 +64,7 @@
   <div class="cell">
    <label>
     <span class="fixFont"><span class="numbering">3.</span> Select Program</span>
-    <select class="chosen-select" multiple data-placeholder=" " id="programSelect" onchange="calculator();">
+  <select class="chosen-select" multiple data-placeholder=" " id="programType">
      <option value="">Please Select...</option>
      <option class="u" value="37">Asian Studies BA</option>
      <option class="u" value="1">Communication Arts: Organizational Communication Studies BA</option>
@@ -122,18 +122,18 @@
   <div class="cell">
    <p><span class="fixFont"><span class="numbering">4.</span> Residency</span></p>
  </div>
- <div class="cell large-4">
+ <div class="cell large-4 small-4">
    <label class="material-checkbox"><input type="checkbox" class="radio" name="fooby[1][]"><span>In-State</span></label>
  </div>
- <div class="cell large-4">
+ <div class="cell large-4 small-4">
    <label class="material-checkbox"><input type="checkbox" class="radio" name="fooby[1][]"><span>Out-of-state</span></label>
  </div>
- <div class="cell large-4">
+ <div class="cell large-4 small-4">
    <label class="material-checkbox"><input type="checkbox" class="radio" name="fooby[1][]"><span>International</span></label>
  </div>
 </div>
 </div>
-<div class="cell small-6" id="slidercell">
+<div class="cell large-6 small-12" id="slidercell">
  <!--slider area-->
  <br>
  <div class="grid-x grid-padding-x">
@@ -177,10 +177,10 @@
 <div class="grid-x grid-padding-x">
   <div class="cell text-center whitefont bluebg">
    <div class="grid-x">
-    <div class="cell large-6 text-right">
+    <div class="cell large-6 small-6 text-right">
      <span id="ttlhrs" class="h1 bigNum">0 </span>
    </div>
-   <div class="cell large-2 text-left">
+   <div class="cell large-2 small-2 text-left">
      <div class="grid-x">
       <div class="cell" style="line-height:1.00;">
        <br>
@@ -198,7 +198,7 @@
 <div class="grid-x grid-margin-x">
   <!--table-->
   <div class="cell">
-   <table>
+   <table class="stack">
     <thead>
      <tr>
       <th>Tuition/Fee Description</th>
