@@ -1,3 +1,5 @@
+
+
 <!doctype html>
 <html class="no-js" lang="en">
    <head>
@@ -348,6 +350,15 @@
       </script>
       <script>
          $(document).foundation();
+      </script>
+      <script>
+         if (Foundation.MediaQuery.is('small only')) {
+         // True if small
+         // False if medium or large
+         alert("work");
+         $(".chosen-select").removeAttr("multiple");
+         
+         }
       </script>
    </body>
 </html>
