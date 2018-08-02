@@ -155,12 +155,7 @@ $(function() {
 */
 
 //fix mobile??
-if (Foundation.MediaQuery.is('small only')) {
-    // True if small
-    // False if medium or large
-    $("#programType_chosen").attr("width", "230px");
 
-}
 
 
 var chosenSelects = $('.ui-select').find('.chosen-select, [chosen]'),
