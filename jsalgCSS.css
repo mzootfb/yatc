@@ -105,11 +105,14 @@ input[type=range]::-moz-range-track {
     background-color: #071E3E;
     color: #FFFFFF;
     padding: 1rem;
+    letter-spacing: 3px;
 }
 .buttonC {
     background-color: #FFFFFF;
     color: #071E3E;
     padding: 1rem;
+    letter-spacing: 3px;
+
 }
 /*table styling*/
 
