@@ -1,5 +1,3 @@
-
-
 <!doctype html>
 <html class="no-js" lang="en">
    <head>
@@ -20,11 +18,12 @@
    </head>
    <body>
       <!--start body-->
+      <span id="konam"></span>
       <div class="grid-container">
          <div class="grid-x grid-margin-x grid-padding-x">
             <div class="cell">
                <!--description-->
-               <p>The Tuition Calculator provides a cost estimate if the tuition and fees associated with attending FIU Online as an Undergraduate or Graduate student.</p>
+               <p class="badFontFix">The Tuition Calculator provides a cost estimate if the tuition and fees associated with attending FIU Online as an Undergraduate or Graduate student.</p>
                <br>
             </div>
          </div>
@@ -41,7 +40,7 @@
                   <div class="cell large-6 small-12">
                      <label>
                         <span class="fixFont"><span class="numbering">1.</span> Academic Year</span>
-                        <select class="chosen-select inpt" multiple data-placeholder=" " id="acadYear">
+                        <select class="chosen-select inpt ui-select chosen-mobile" multiple data-placeholder=" " id="acadYear">
                            <option value="">Please Select...</option>
                            <option value="1718">2017-2018</option>
                            <option value="1617">2016-2017</option>
@@ -54,7 +53,7 @@
                   <div class="cell large-6 small-12">
                      <label>
                         <span class="fixFont"><span class="numbering">2.</span> Degree Type</span>
-                        <select class="chosen-select" multiple data-placeholder=" " id="degreeType">
+                        <select class="chosen-select ui-select chosen-mobile" multiple data-placeholder=" " id="degreeType">
                            <option value="">Please Select...</option>
                            <option value="1">Undergraduate</option>
                            <option value="2">Graduate</option>
@@ -67,7 +66,7 @@
                   <div class="cell large-12 small-12">
                      <label>
                         <span class="fixFont"><span class="numbering">3.</span> Select Program</span>
-                        <select class="chosen-select inpt" multiple data-placeholder=" " id="programType">
+                        <select class="chosen-select ui-select chosen-mobile inpt" multiple data-placeholder=" " id="programType">
                            <option value="">Please Select...</option>
                            <option class="u" value="37">Asian Studies BA</option>
                            <option class="u" value="1">Communication Arts: Organizational Communication Studies BA</option>
@@ -122,17 +121,17 @@
                </div>
                <br>
                <div class="grid-x grid-margin-x grid-padding-x">
-                  <div class="cell large-12 small-12">
+                  <div class="cell large-12 small-12" id="checkboxgrp">
                      <p><span class="fixFont"><span class="numbering">4.</span> Residency</span></p>
                   </div>
                   <div class="cell large-4 small-12">
-                     <label class="material-checkbox"><input type="checkbox" class="radio" name="fooby[1][]" value="1" id="flres"><span>In-State</span></label>
+                     <label class="material-checkbox badFontFix"><input type="checkbox" class="radio" name="fooby[1][]" value="1" id="flres"><span class="badFontFix">In-State</span></label>
                   </div>
                   <div class="cell large-4 small-12">
-                     <label class="material-checkbox"><input type="checkbox" class="radio" name="fooby[1][]" value="2" id="notres"><span>Out-of-state</span></label>
+                     <label class="material-checkbox badFontFix"><input type="checkbox" class="radio" name="fooby[1][]" value="2" id="notres"><span class="badFontFix">Out-of-state</span></label>
                   </div>
                   <div class="cell large-4 small-12">
-                     <label class="material-checkbox"><input type="checkbox" class="radio" name="fooby[1][]" value="3" id="intrl"><span>International</span></label>
+                     <label class="material-checkbox badFontFix"><input type="checkbox" class="radio" name="fooby[1][]" value="3" id="intrl"><span class="badFontFix">International</span></label>
                   </div>
                </div>
             </div>
@@ -200,16 +199,24 @@
          </div>
          <!--testing div-->
          <!--
-         <div class="grid-padding-x grid-margin-x grid-x">
-            <div class="cell">
-               <div class="callout warning">
-                  <h5 id-"testTitle">This is a callout.</h5>
-                  <p id="testText">It has an easy to override visual style, and is appropriately subdued.</p>
-                  <a href="#" id="testHighlight">It's dangerous to go alone, take this.</a>
+            <div class="grid-padding-x grid-margin-x grid-x">
+               <div class="cell">
+                  <div class="callout warning">
+                     <h5 id-"testTitle">This is a callout.</h5>
+                     <p id="testText">It has an easy to override visual style, and is appropriately subdued.</p>
+                     <label>Select Menu
+            <select>
+            <option value="husker">Husker</option>
+            <option value="starbuck">Starbuck</option>
+            <option value="hotdog">Hot Dog</option>
+            <option value="apollo">Apollo</option>
+            </select>
+            </label>
+                     <a href="#" id="testHighlight">It's dangerous to go alone, take this.</a>
+                  </div>
                </div>
             </div>
-         </div>
-         -->
+            -->
          <!--end testing div-->
          <div class="grid-x grid-margin-x">
             <!--table-->
@@ -275,7 +282,15 @@
                </table>
             </div>
          </div>
-         <!--<p><button class="button" data-toggle="gradModal">Click me for a modal</button></p>-->
+         <!--warning modal<p><button class="button" data-toggle="warningModal">Click me for a modal</button></p>-->
+         <div class="reveal" id="warningModal" data-reveal data-animation-in="spin-in" data-animation-out="spin-out">
+            <h1>Uh oh!</h1>
+            <p class="lead">Looks like you've done a oopsie. Why don't we pretend this never happened?&nbsp;<i class="far fa-dizzy"></i></p>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+            </button>
+         </div>
+         <!--testing gradmodal<p><button class="button" data-toggle="gradModal">Click me for a modal</button></p>-->
          <div class="reveal" id="gradModal" data-reveal data-animation-in="slide-in-up" data-animation-out="slide-out-down">
             <h3>You've got a grad program!</h3>
             <!--<p id="gradText" class="lead">There are many options for animating modals, check out the Motion UI library to see them all</p>-->
@@ -283,7 +298,7 @@
                <dt id="gradTitle">Construction Manamgement</dt>
                <dd class="lead" id="gradText">$18,000 & 58 Credit Hours</dd>
             </dl>
-            <p>Graduate degree programs work a bit differently than undergraduate courses. The above price is an estimate and we urge you to reach out to <a href="#">this link</a> for more information.</p>
+            <p>Graduate degree programs work a bit differently than undergraduate courses. The above price is an estimate and we urge you to reach out to <a href="#"> this link</a> for more information.</p>
             <button class="close-button" data-close="gradModal" aria-label="Close reveal" type="button">
             <span aria-hidden="true">&times;</span>
             </button>
@@ -328,12 +343,11 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/2.0.3/motion-ui.js"></script>
       <!--custom js-->
       <script src="jsalgJS.js"></script>
-      <script>
-         $(".chosen-select").chosen({max_selected_options: 1});  
+      <script id="chosenMaker">
+         $(".chosen-select").chosen({max_selected_options: 1, display_disabled_options: false, inherit_select_classes: true});
       </script>
       <script>
          $(document).foundation();
       </script>
    </body>
 </html>
-
