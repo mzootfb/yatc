@@ -259,3 +259,6 @@ body {
 .sub {
     vertical-align: sub;
 }
+.opaku{
+  opacity: 0.5;
+}
