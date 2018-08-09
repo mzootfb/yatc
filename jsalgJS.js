@@ -150,16 +150,19 @@ $(function() {
 		$(degreetypelabel).removeClass("opaku");
 		$('#degreeType').prop("disabled", false);
 		$('#degreeType').trigger('chosen:updated');
+		$('#step2popover').foundation('_destroy');
 	});
 	$(degreetypelabel).change(function() {
 		$(selprgrmlabel).removeClass("opaku");
 		$('#programType').prop("disabled", false);
 		$('#programType').trigger('chosen:updated');
+		$('#step3popover').foundation('_destroy');
 
 	});
 	$(selprgrmlabel).change(function() {
 		$(reslabel).removeClass("opaku");
-		$(".material-checkbox").prop("disabled", false);
+		$(".radio").prop("disabled", false);
+		$('#step4popover').foundation('_destroy');
 	});
 	$(reslabel).change(function() {
 		$(slidersec).removeClass("opaku");
